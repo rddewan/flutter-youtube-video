@@ -4,15 +4,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
-class YouTubePage extends StatefulWidget {
-  const YouTubePage({Key? key, required this.title}) : super(key: key);
+class YouTubeListVideoScreen extends StatefulWidget {
+  const YouTubeListVideoScreen({Key? key, required this.title}) : super(key: key);
   final String title;
 
   @override
-  State<YouTubePage> createState() => _YouTubePageState();
+  State<YouTubeListVideoScreen> createState() => _YouTubeListVideoScreenState();
 }
 
-class _YouTubePageState extends State<YouTubePage> { 
+class _YouTubeListVideoScreenState extends State<YouTubeListVideoScreen> { 
   late YoutubePlayerController _controller;
   late TextEditingController _idController;
   late TextEditingController _seekToController;

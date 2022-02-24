@@ -3,9 +3,9 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
-import 'package:youtube_video/video_player.dart';
-import 'package:youtube_video/youtube_player.dart';
-import 'package:youtube_video/youtube_screen.dart';
+import 'package:youtube_video/video_player_screen.dart';
+import 'package:youtube_video/youtube_list_video_screen.dart';
+import 'package:youtube_video/youtube_single_video_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(     
         primarySwatch: Colors.blue,
       ),
-      home: const SingleVideoPlayer() //VideoPlayerScreen() //YouTubePage(title: 'Flutter Demo Home Page'),
+      home: const YouTubeSingleVideoScreen()
     );
   }
 }

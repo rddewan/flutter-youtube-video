@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
+import 'package:youtube_video/youtube_list_video_screen.dart';
 
-class SingleVideoPlayer extends StatefulWidget {
-  const SingleVideoPlayer({Key? key}) : super(key: key);
+class YouTubeSingleVideoScreen extends StatefulWidget {
+  const YouTubeSingleVideoScreen({Key? key}) : super(key: key);
 
   @override
-  State<SingleVideoPlayer> createState() => _SingleVideoPlayerState();
+  State<YouTubeSingleVideoScreen> createState() => _YouTubeSingleVideoScreenState();
 }
 
-class _SingleVideoPlayerState extends State<SingleVideoPlayer> {
+class _YouTubeSingleVideoScreenState extends State<YouTubeSingleVideoScreen> {
   late YoutubePlayerController _controller;  
   late YoutubePlayerController _modelController; 
   bool _muted = true;
@@ -84,6 +85,15 @@ class _SingleVideoPlayerState extends State<SingleVideoPlayer> {
             },           
             icon: const Icon(Icons.next_plan), 
             label: const Text('Open Dialog')
+          ),
+          const SizedBox(height: 16.0,),
+          OutlinedButton.icon(
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (_) 
+                => const YouTubeListVideoScreen(title: 'YouTube Video List')));
+            },           
+            icon: const Icon(Icons.next_plan), 
+            label: const Text('YouTube Video List')
           )
       ],
         ),
